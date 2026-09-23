@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f3f6f8;
+  --foreground: #15202b;
+  --muted: #5b6b78;
+  --surface: #ffffff;
+  --surface-muted: #eef3f6;
+  --border: #d5dee5;
+  --input-bg: #fbfcfd;
+  --placeholder: #8a9aa8;
+  --accent: #0f6a6a;
+  --accent-hover: #0c5555;
+  --accent-fg: #f7fbfb;
+  --accent-soft: color-mix(in srgb, var(--accent) 22%, transparent);
+  --danger: #9b2c2c;
+  --danger-bg: #fdf2f2;
+  --danger-border: #f0c4c4;
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #15202b 6%, transparent);
+  --chart-cursor: color-mix(in srgb, var(--accent) 8%, transparent);
+  --base-a: #1f6f8b;
+  --base-t: #3d7a5a;
+  --base-g: #b06a2b;
+  --base-c: #5b5f97;
+  --hero-glow: radial-gradient(
+    120% 80% at 10% -10%,
+    color-mix(in srgb, #0f6a6a 18%, transparent),
+    transparent 55%
+  ),
+    radial-gradient(
+      90% 60% at 100% 0%,
+      color-mix(in srgb, #1f6f8b 12%, transparent),
+      transparent 50%
+    ),
+    linear-gradient(180deg, #eef5f6 0%, var(--background) 55%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-source-sans);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0d1418;
+    --foreground: #e8eef2;
+    --muted: #9aabba;
+    --surface: #152028;
+    --surface-muted: #1a2832;
+    --border: #2a3a46;
+    --input-bg: #101920;
+    --placeholder: #6f8292;
+    --accent: #2aa3a3;
+    --accent-hover: #3bb5b5;
+    --accent-fg: #061314;
+    --accent-soft: color-mix(in srgb, var(--accent) 28%, transparent);
+    --danger: #f0a0a0;
+    --danger-bg: #2a1717;
+    --danger-border: #5a2d2d;
+    --shadow-sm: 0 1px 2px color-mix(in srgb, #000 35%, transparent);
+    --chart-cursor: color-mix(in srgb, var(--accent) 12%, transparent);
+    --base-a: #5eb3d1;
+    --base-t: #6fba8f;
+    --base-g: #d4a066;
+    --base-c: #9aa0d4;
+    --hero-glow: radial-gradient(
+      120% 80% at 10% -10%,
+      color-mix(in srgb, #2aa3a3 16%, transparent),
+      transparent 55%
+    ),
+      radial-gradient(
+        90% 60% at 100% 0%,
+        color-mix(in srgb, #5eb3d1 10%, transparent),
+        transparent 50%
+      ),
+      linear-gradient(180deg, #101a20 0%, var(--background) 55%);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-source-sans), ui-sans-serif, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+}
