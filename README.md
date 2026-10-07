@@ -2,6 +2,8 @@
 
 A Next.js portfolio app for analyzing DNA sequences with **deterministic, programmatic** composition metrics. AI explanation is planned for a later phase and will never replace biological calculations.
 
+**Repository:** [github.com/ajohnofficial001/DNA-Sequence-Analyzer](https://github.com/ajohnofficial001/DNA-Sequence-Analyzer)
+
 ## Phase 1 features
 
 - Paste raw DNA sequences (A/T/G/C)
@@ -30,18 +32,22 @@ Sequence math lives in `src/lib/dna/` so future features (complements, ORFs, FAS
 
 ## Run locally
 
+Requirements: Node.js 20+ and npm.
+
 ```bash
+git clone https://github.com/ajohnofficial001/DNA-Sequence-Analyzer.git
+cd DNA-Sequence-Analyzer
 npm install
 npm run dev
 ```
 
-Open [http://127.0.0.1:43127](http://127.0.0.1:43127).
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Scripts
+### Other scripts
 
 | Command | Description |
 | --- | --- |
-| `npm run dev` | Start the development server on port 43127 |
+| `npm run dev` | Start the development server (port 3000) |
 | `npm run build` | Production build |
 | `npm run start` | Serve the production build |
 | `npm run lint` | ESLint |
@@ -50,11 +56,12 @@ Open [http://127.0.0.1:43127](http://127.0.0.1:43127).
 
 ## Deploy on Vercel
 
-This Phase 1 app is a standard Next.js project with no server-only bioinformatics runtime yet, so it deploys cleanly on Vercel:
+1. Go to [vercel.com/new](https://vercel.com/new) and sign in with GitHub
+2. Install/configure the Vercel GitHub App so it can access this repository
+3. Import `ajohnofficial001/DNA-Sequence-Analyzer`
+4. Keep the default Next.js build settings and deploy
 
-1. Push the repository to GitHub/GitLab/Bitbucket
-2. Import the project in Vercel
-3. Use the default Next.js build settings (`npm run build`)
+No environment variables are required for Phase 1.
 
 ## Roadmap (not implemented yet)
 
